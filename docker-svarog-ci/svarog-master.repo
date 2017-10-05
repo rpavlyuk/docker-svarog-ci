@@ -1,0 +1,6 @@
+[svarog-master]
+name=svarog-master
+baseurl=http://repo.ukrspace.net:80/repo/svarog-master/fast/fc24/x86_64
+enabled=1
+gpgcheck=0
+metadata_expire=1s
