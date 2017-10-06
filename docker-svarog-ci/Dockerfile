@@ -45,5 +45,7 @@ RUN yum localinstall -y /root/rpmbuild/RPMS/x86_64/bash*
 
 RUN systemctl enable jenkins.service
 
+EXPOSE 8080 50000
+
 ### Kick it off
 CMD ["/usr/sbin/init"]
