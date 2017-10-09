@@ -1,0 +1,10 @@
+container: docker.io/rpavlyuk/c7-svarog-ci
+created: 2017-10-06 16:53:53.501852
+name: svarog-ci
+ports:
+        8080/tcp: 8080
+        50000/tcp: 50000
+volumes:
+        /var/lib/jenkins:
+                bind: /var/lib/jenkins
+                mode: rw
