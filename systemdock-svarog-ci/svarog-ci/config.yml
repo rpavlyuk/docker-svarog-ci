@@ -8,3 +8,9 @@ volumes:
         /var/lib/jenkins:
                 bind: /var/lib/jenkins
                 mode: rw
+        /var/www/repo:
+                bind: /var/www/repo
+                mode: rw
+privileged: false
+tty: false
+working_dir: /root
