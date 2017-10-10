@@ -11,6 +11,9 @@ volumes:
         /var/www/repo:
                 bind: /var/www/repo
                 mode: rw
+        /sys/fs/cgroup:
+                bind: /sys/fs/cgroup
+                mode: ro
 privileged: true
 tty: true
 working_dir: /root
