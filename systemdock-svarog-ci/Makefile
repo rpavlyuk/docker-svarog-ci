@@ -3,6 +3,7 @@ PREFIX = $(DESTDIR)/usr
 SYSCONFDIR=$(DESTDIR)/etc
 DATADIR=$(PREFIX)/share
 SYSTEMD_DIR=$(PREFIX)/lib/systemd/system
+JENKINS_HOME_DIR=$(DESTDIR)/var/lib/jenkins
 INSTALL = /bin/install -c
 MKDIR = /bin/install -c -d
 RM = rm -rf
@@ -19,7 +20,7 @@ install:
 	$(MKDIR) $(SYSTEMD_DIR)
 	$(CP) svarog-ci $(SYSCONFDIR)/systemdock/containers.d
 	$(LN) $(SYSCONFDIR)/systemdock/containers.d/svarog-ci/systemdock-svarog-ci.service $(SYSTEMD_DIR)/$(_MODULE).service
-
+	$(MKDIR) $(JENKINS_HOME_DIR)
 
 uninstall:
 	$(RM) $(SYSTEMD_DIR)/$(_MODULE).service

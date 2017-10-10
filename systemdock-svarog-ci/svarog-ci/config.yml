@@ -11,6 +11,9 @@ volumes:
         /var/www/repo:
                 bind: /var/www/repo
                 mode: rw
-privileged: false
-tty: false
+privileged: true
+tty: true
 working_dir: /root
+command:
+        host:
+                post: chown -R $(docker exec svarog-ci id -u jenkins | tr -d '\r'):$(docker exec svarog-ci id -g jenkins | tr -d '\r') /var/lib/jenkins

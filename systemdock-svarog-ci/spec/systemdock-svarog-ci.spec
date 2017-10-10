@@ -46,5 +46,7 @@ ln -s %{_sysconfdir}/systemdock/containers.d/svarog-ci/systemdock-svarog-ci.serv
 
 %{_unitdir}/systemdock-svarog-ci.service
 
+%dir %{_sharedstatedir}/jenkins
+
 %changelog
 
