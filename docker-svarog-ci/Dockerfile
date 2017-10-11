@@ -63,7 +63,12 @@ RUN yum install -y \
 	automake \
 	autoconf \
 	sed \
-	docker
+	docker \
+	python34-setuptools \
+	python34-pip \
+	python3-rpm-macros \
+	python-rpm-macros \
+	python-setuptools
 RUN rpm -Uvh /root/bash-4.3.42-1.fc21.src.rpm
 RUN sed -i '1i%define _unpackaged_files_terminate_build 0' /root/rpmbuild/SPECS/bash.spec
 RUN rpmbuild -bb /root/rpmbuild/SPECS/bash.spec
